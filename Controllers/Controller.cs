@@ -21,13 +21,13 @@ namespace CodeRefactoring.Controllers
         public List<Stoka> GetAllAnimals()
         {
             
-            return db.Stoki.ToList();
+            return db.Product.ToList();
         }
 
         [HttpGet("getone/{x}")]
         public Stoka GetOneAnimal(int x)
         {
-            return db.Stoki.Find(x); 
+            return db.Product.Find(x); 
         }
 
         [HttpPost("add")]
