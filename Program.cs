@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Namespace;
+using PetShoop;
 
 var builder = WebApplication.CreateBuilder(args);
 

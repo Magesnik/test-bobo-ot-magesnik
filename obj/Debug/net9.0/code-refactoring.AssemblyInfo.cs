@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("code-refactoring")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36e794c2c0404a6e7040af9a6a3a46a1860de1c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed0b7de88d87b7501b05162a889f8d21342853af")]
 [assembly: System.Reflection.AssemblyProductAttribute("code-refactoring")]
 [assembly: System.Reflection.AssemblyTitleAttribute("code-refactoring")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,24 +1,24 @@
-namespace Namespace
+namespace PetShoop
 {
     public class Animal
     {
         public int id;
-        public string Namez;
-        public string OwNer;
-        public int agee;
-        public string typee;
-        public bool sickOrNot = false;
-        public string notezz = "";
+        public string Names;
+        public string Owner;
+        public int Age;
+        public string Type;
+        public bool SickOrNot = false;
+        public string Notes = "";
 
         public void MakeOlder()
         {
-            agee += 3;
+            Age += 3;
         }
 
         public void Heal()
         {
-            sickOrNot = false;
-            notezz = "feeling ok i guess";
+            SickOrNot = false;
+            Notes = "feeling ok i guess";
         }
     }
 }

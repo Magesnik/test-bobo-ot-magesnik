@@ -1,7 +1,7 @@
 using System;
-using Namespace;
+using PetShoop;
 
-namespace NameSpace
+namespace AnimalServices
 {
     public class AnimalService
     {
@@ -18,15 +18,15 @@ namespace NameSpace
             }
         }
 
-        public void AddNewAnimal(string n, string o, int a, string t)
+        public void AddNewAnimal(string name, string owner, int age, string type)
         {
             var newAnimal = new Animal();
             newAnimal.id = new Random().Next(1000, 9999);
-            newAnimal.Namez = n;
-            newAnimal.OwNer = o;
-            newAnimal.agee = a;
-            newAnimal.typee = t;
-            newAnimal.sickOrNot = false;
+            newAnimal.Names = name;
+            newAnimal.Owner = owner;
+            newAnimal.Age = age;
+            newAnimal.Type = type;
+            newAnimal.SickOrNot = false;
             _db.Animal.Add(newAnimal);
         }
 
@@ -34,7 +34,7 @@ namespace NameSpace
         {
             foreach (var x in _db.Animal.ToList())
             {
-                x.agee += 7;
+                x.Age += 7;
             }
         }
     }

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Namespace;
-using NameSpace;
+using PetShoop;
+using AnimalServices;
 
 namespace CodeRefactoring.Controllers
 {

@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace Namespace
+namespace PetShoop
 {
     public class Potrebitel : IdentityUser
     {
-        public string purvoime { get; set; }
+        public string Purvoime { get; set; }
         public string LastName { get; set; }
     }
 }
