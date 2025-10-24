@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace PetClinic
@@ -18,6 +19,11 @@ namespace PetClinic
         [Comment("Owner name")]
         public string Owner { get; set; }
 
+        public string UserId { get; set; }
+
+        [ForeignKey(nameof(UserId))]
+        public User User { get; set; } 
+        
         [Required]
         [Range(0, 255)]
         [Comment("Animal age")]
@@ -36,9 +42,9 @@ namespace PetClinic
         [Comment("Additional notes about the animal")]
         public string Notes { get; set; } = "";
 
-        public void MakeOlder()
+        public void MakeOld()
         {
-            Age += 3;
+            Age += 1;
         }
 
         public void Heal()
