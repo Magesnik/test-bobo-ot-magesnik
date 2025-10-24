@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using PetShoop;
+using PetClinic;
 using AnimalServices;
 
 namespace CodeRefactoring.Controllers
@@ -17,45 +17,32 @@ namespace CodeRefactoring.Controllers
             servicer = s;
         }
 
-        [HttpGet("getall")]
-        public List<Stoka> GetAllAnimals()
-        {
-            
-            return db.Product.ToList();
-        }
-
-        [HttpGet("getone/{x}")]
-        public Stoka GetOneAnimal(int x)
-        {
-            return db.Product.Find(x); 
-        }
-
         [HttpPost("add")]
-        public string AddAnimal([FromQuery] string n, string o, int a, string t)
+        public string AddAnimal([FromQuery] string name, string owner, ushort age, string type)
         {
-            servicer.AddNewAnimal(n, o, a, t);
-            return "200? most probably.";
+            servicer.AddNewAnimal(name, owner, age, type);
+            return "200 OK animal added";
         }
 
         [HttpPost("heal/{id}")]
         public string HealAnimal(int id)
         {
             servicer.DoHeal(id);
-            return "Animal is healed... maybe. What status code?";
+            return "Animal is healed and status code 200";
         }
 
         [HttpDelete("delete/{id}")]
         public string DeleteAnimal(int id)
         {
             db.Remove(id);
-            return "removed i think";
+            return "removed id";
         }
 
         [HttpPost("ageup")]
         public string AgeUp()
         {
             servicer.RandomAgeUp();
-            return "everyone got older";
+            return "everyone got older.";
         }
     }
 }

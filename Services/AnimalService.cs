@@ -1,5 +1,5 @@
 using System;
-using PetShoop;
+using PetClinic;
 
 namespace AnimalServices
 {
@@ -18,10 +18,10 @@ namespace AnimalServices
             }
         }
 
-        public void AddNewAnimal(string name, string owner, int age, string type)
+        public void AddNewAnimal(string name, string owner, ushort age, string type)
         {
             var newAnimal = new Animal();
-            newAnimal.id = new Random().Next(1000, 9999);
+            newAnimal.id = Guid.NewGuid().ToString();
             newAnimal.Names = name;
             newAnimal.Owner = owner;
             newAnimal.Age = age;
